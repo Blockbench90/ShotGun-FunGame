@@ -17,9 +17,9 @@ const checkCollisions = (cannonBalls, flyingDiscs) => {
     };
     cannonBalls.forEach((cannonBall) => {
       const rectB = {
-        x1: cannonBall.position.x - 8,
+        x1: cannonBall.position.x - 1,
         y1: cannonBall.position.y - 8,
-        x2: cannonBall.position.x + 8,
+        x2: cannonBall.position.x + 0,
         y2: cannonBall.position.y + 8,
       };
       if (checkCollision(rectA, rectB)) {

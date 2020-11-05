@@ -11,9 +11,12 @@ const CannonBall = (props) => {
   return (
     <ellipse
       style={ballStyle}
+      //траектория выстрела по х и y
       cx={props.position.x}
       cy={props.position.y}
+      //ширина липехи
       rx="16"
+      //высота липехи
       ry="16"
     />
   );

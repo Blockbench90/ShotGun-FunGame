@@ -1,9 +1,9 @@
 import React from 'react';
 import { gameHeight, gameUppermostPoint, skyAndGroundWidth } from '../../utils/constants';
-
+import sky from '../../assets/sky_back.jpg'
 const Sky = () => {
   const skyStyle = {
-    fill: '#30abef',
+    fill: '#30abef'
   };
   return (
     <g id="sky">

@@ -18,7 +18,7 @@ const rotate360 = keyframes`
 const Rotate = styled.g`
   animation: ${rotate360} 4s linear;
 `;
-
+//падающие тарелки
 const FlyingDisc = props => (
   <Rotate>
     <DiscBase position={props.position} />

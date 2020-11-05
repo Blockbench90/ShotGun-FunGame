@@ -5,8 +5,9 @@ import CannonPipe from './CannonPipe/CannonPipe';
 
 const Cannon = props => (
   <g id="cannon">
-    <CannonPipe xAxis={0} yAxis={0} rotation={props.rotation} />
-    <CannonBase xAxis={0} yAxis={0} />
+    <CannonBase xAxis={900} yAxis={0} />
+    {/*<CannonPipe xAxis={1040} yAxis={-80} rotation={props.rotation} />*/}
+    <CannonBase xAxis={950} yAxis={0} />
   </g>
 );
 

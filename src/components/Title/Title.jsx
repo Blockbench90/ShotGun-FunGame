@@ -4,7 +4,7 @@ import { pathFromBezierCurve } from '../../utils/formulas';
 const Title = () => {
   const textStyle = {
     fontFamily: '"Joti One", cursive',
-    fontSize: 120,
+    fontSize: 80,
     fill: '#cbca62',
   };
 
@@ -61,12 +61,12 @@ const Title = () => {
       </defs>
       <text {...textStyle}>
         <textPath xlinkHref="#AliensPath">
-          Aliens,
+          Здарова,
         </textPath>
       </text>
       <text {...textStyle}>
         <textPath xlinkHref="#GoHomePath">
-          Go Home!
+          лови какаху!
         </textPath>
       </text>
     </g>

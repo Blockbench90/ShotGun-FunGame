@@ -1,12 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { gameHeight, gameUppermostPoint } from '../../utils/constants';
+import sky from '../../assets/sky_back.jpg'
 
 const Canvas = (props) => {
   const viewBox = [window.innerWidth / -2, gameUppermostPoint, window.innerWidth, gameHeight];
   return (
     <svg
       id="my-super-canvas"
+      xmlns={sky}
       className="bang-bang-canvas"
       viewBox={viewBox}
       preserveAspectRatio="xMaxYMax none"

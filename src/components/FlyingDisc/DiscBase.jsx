@@ -12,7 +12,9 @@ const DiscBase = (props) => {
     <ellipse
       cx={props.position.x}
       cy={props.position.y}
+      //ширина тарелки
       rx="40"
+      //высота тарелки
       ry="10"
       style={discMiddleStyle}
     />

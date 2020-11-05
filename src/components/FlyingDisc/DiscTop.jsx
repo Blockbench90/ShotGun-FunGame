@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Position from '../../utils/Position';
 import { pathFromBezierCurve } from '../../utils/formulas';
-
+//белый круглячек на шапке тарелки
 const DiscTop = (props) => {
   const discTopStyle = {
     fill: '#b6b6b6',

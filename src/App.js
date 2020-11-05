@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ReactGA from 'react-ga';
-// import Pusher from 'pusher-js';
-// import * as Auth0 from 'auth0-web';
-
 import Canvas from './components/Canvas/Canvas';
 import Ground from './components/Ground/Ground';
 import Cannon from './components/Cannon/Cannon';
@@ -24,17 +21,7 @@ import {
 } from './utils/constants';
 import Title from './components/Title/Title';
 import CurrentScore from './components/CurrentScore/CurrentScore';
-// import Leaderboard from './components/Leaderboard/Leaderboard';
-
-// Auth0.configure({
-//   domain: 'bkrebs.auth0.com',
-//   clientID: '6pjrHHSjF0ME4ShrOxN62ScKyMmXJud6',
-//   audience: 'https://aliens-go-home.digituz.com.br',
-//   redirectUri: 'http://localhost:3000/',
-//   responseType: 'token id_token',
-//   scope: 'openid profile manage:points',
-// });
-
+import NewSky from "./assets/NewSky";
 
 ReactGA.initialize('UA-113618973-1');
 
@@ -49,45 +36,6 @@ class App extends Component {
 
   componentDidMount() {
     const self = this;
-
-    // Auth0.handleAuthCallback();
-    //
-    // Auth0.subscribe((auth) => {
-    //   if (!auth) {
-    //     self.props.authenticationEvent(null);
-    //     return;
-    //   }
-    //
-    //   Pusher.logToConsole = true;
-    //
-    //   const pusher = new Pusher('e504736d8f802e6d36f1', {
-    //     authEndpoint: 'https://wt-krebs-bruno-sp-gmail-com-0.run.webtask.io/webtask/pusher/auth',
-    //     cluster: 'us2',
-    //     encrypted: true,
-    //     auth: {
-    //       headers: { Authorization: `Bearer ${localStorage.getItem(Auth0.ACCESS_TOKEN)}` },
-    //     },
-    //   });
-    //
-    //   this.channel = pusher.subscribe('presence-leaderboard');
-    //
-    //   this.channel.bind('pusher:subscription_succeeded', (leaderboard) => {
-    //     self.props.loadLeaderboard(leaderboard);
-    //   });
-    //
-    //   this.channel.bind('pusher:member_added', (member) => {
-    //     self.props.addMember(member);
-    //   });
-    //
-    //   this.channel.bind('pusher:member_removed', (member) => {
-    //     self.props.removeMember(member);
-    //   });
-    //
-    //   this.channel.bind('client-new-max-score', (maxScore) => {
-    //     self.props.newMaxScore(maxScore);
-    //   });
-    // });
-
     setInterval(() => {
       if (!self.props.gameState.started) return;
 
@@ -193,46 +141,46 @@ class App extends Component {
   }
 }
 
-// App.propTypes = {
-//   angle: PropTypes.number.isRequired,
-//   me: PropTypes.shape({
-//     id: PropTypes.string.isRequired,
-//     maxScore: PropTypes.number.isRequired,
-//     name: PropTypes.string.isRequired,
-//     picture: PropTypes.string.isRequired,
-//   }),
-//   leaderboard: PropTypes.arrayOf(PropTypes.shape({
-//     id: PropTypes.string.isRequired,
-//     maxScore: PropTypes.number.isRequired,
-//     name: PropTypes.string.isRequired,
-//     picture: PropTypes.string.isRequired,
-//   })).isRequired,
-//   cannonBalls: PropTypes.arrayOf(PropTypes.shape({
-//     position: PropTypes.instanceOf(Position).isRequired,
-//     angle: PropTypes.number.isRequired,
-//     id: PropTypes.number.isRequired,
-//   })).isRequired,
-//   createAndMove: PropTypes.func.isRequired,
-//   flyingDiscs: PropTypes.arrayOf(PropTypes.shape({
-//     position: PropTypes.instanceOf(Position).isRequired,
-//     angle: PropTypes.number.isRequired,
-//     id: PropTypes.number.isRequired,
-//   })).isRequired,
-//   lastDiscCreatedAt: PropTypes.instanceOf(Date).isRequired,
-//   gameState: PropTypes.shape({
-//     started: PropTypes.bool.isRequired,
-//     kills: PropTypes.number.isRequired,
-//     lives: PropTypes.arrayOf(PropTypes.number).isRequired,
-//   }).isRequired,
-//   authenticationEvent: PropTypes.func.isRequired,
-//   moveObjects: PropTypes.func.isRequired,
-//   shoot: PropTypes.func.isRequired,
-//   startGame: PropTypes.func.isRequired,
-//   loadLeaderboard: PropTypes.func.isRequired,
-//   addMember: PropTypes.func.isRequired,
-//   removeMember: PropTypes.func.isRequired,
-//   newMaxScore: PropTypes.func.isRequired,
-// };
+App.propTypes = {
+  angle: PropTypes.number.isRequired,
+  me: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    maxScore: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    picture: PropTypes.string.isRequired,
+  }),
+  leaderboard: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    maxScore: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    picture: PropTypes.string.isRequired,
+  })).isRequired,
+  cannonBalls: PropTypes.arrayOf(PropTypes.shape({
+    position: PropTypes.instanceOf(Position).isRequired,
+    angle: PropTypes.number.isRequired,
+    id: PropTypes.number.isRequired,
+  })).isRequired,
+  createAndMove: PropTypes.func.isRequired,
+  flyingDiscs: PropTypes.arrayOf(PropTypes.shape({
+    position: PropTypes.instanceOf(Position).isRequired,
+    angle: PropTypes.number.isRequired,
+    id: PropTypes.number.isRequired,
+  })).isRequired,
+  lastDiscCreatedAt: PropTypes.instanceOf(Date).isRequired,
+  gameState: PropTypes.shape({
+    started: PropTypes.bool.isRequired,
+    kills: PropTypes.number.isRequired,
+    lives: PropTypes.arrayOf(PropTypes.number).isRequired,
+  }).isRequired,
+  authenticationEvent: PropTypes.func.isRequired,
+  moveObjects: PropTypes.func.isRequired,
+  shoot: PropTypes.func.isRequired,
+  startGame: PropTypes.func.isRequired,
+  loadLeaderboard: PropTypes.func.isRequired,
+  addMember: PropTypes.func.isRequired,
+  removeMember: PropTypes.func.isRequired,
+  newMaxScore: PropTypes.func.isRequired,
+};
 
 export default App;
 

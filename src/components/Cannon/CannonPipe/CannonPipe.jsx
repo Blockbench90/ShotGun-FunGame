@@ -12,8 +12,8 @@ const CannonPipe = (props) => {
 
   const muzzleWidth = 40;
   const halfMuzzle = 20;
-  const height = 100;
-  const yBasis = 70;
+  const height = 50;
+  const yBasis = 1;
 
   const cubicBezierCurve = {
     initialAxis: {
